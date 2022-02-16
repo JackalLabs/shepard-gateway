@@ -1,0 +1,26 @@
+{
+  "name": "jackal_gate",
+  "version": "1.0.0",
+  "description": "Gateway software to the jackal system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "init": "node create_vk.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jackal",
+    "cloud",
+    "storage",
+    "gateway"
+  ],
+  "author": "Marston Connell <marston.ian.connell@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "secretjs": "^0.17.5"
+  }
+}
