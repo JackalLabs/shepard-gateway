@@ -99,7 +99,7 @@ async function main() {
 
 
     app.get('/*', (req, res) => {
-        res.set('Cache-control', 'public, max-age=480');
+        
         let chunks = req.path.split('/');
 
         let p = req.path.substring(chunks[1].length + 1);
@@ -127,7 +127,7 @@ async function main() {
                 const decryptContent = decrypt(content, data.key);
                 // const file = new File([decryptContent], decryptName);
 
-
+                res.set('Cache-control', 'public, max-age=480');
                 let s = bufferToStream(Buffer.from(decryptContent));
                 s.pipe(res);
                 // res.sendStatus(200);
