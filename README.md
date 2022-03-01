@@ -1,4 +1,4 @@
-![Shepherd Banner](./assets/banner.png)
+![Shepherd Banner](./banner.png)
 
 
 # Shepherd
