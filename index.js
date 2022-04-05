@@ -100,11 +100,10 @@ async function main() {
 
     app.get('/*', (req, res) => {
         
-        let chunks = req.path.split('/');
 
-        let p = req.path.substring(chunks[1].length + 1);
 
-        let msg = {get_file: {address: chunks[1], behalf: accAddress, key: process.env.VK, path: p}};
+
+        let msg = {get_contents: {behalf: accAddress, key: process.env.VK, path: req.path.substring(1)}};
  
 
 
@@ -117,7 +116,7 @@ async function main() {
 
             axios({
                 method: 'get',
-                url: 'https://node.marstonconnell.xyz/download?cid=' + ipfs,
+                url: 'https://jackal.squirrellogic.com/download?cid=' + ipfs,
                 responseType: 'blob'
             }).then((resp) => {
 
@@ -133,6 +132,8 @@ async function main() {
                 // res.sendStatus(200);
                     
                 // res.send(resp.data);
+            }).catch(() => {
+                res.sendStatus(404);
             });
 
             // res.status(200).send(response);

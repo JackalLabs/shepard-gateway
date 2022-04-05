@@ -27,7 +27,7 @@ async function main() {
     const httpUrl = process.env.SECRET_REST_URL;
 
     // Use key created in tutorial #2
-    const mnemonic = process.env.MNEMONIC;
+    const mnemonic = process.env.PERSONAL_PHRASE;
   
     // A pen is the most basic tool you can think of for signing.
     // This wraps a single keypair and allows for signing.
@@ -52,12 +52,9 @@ async function main() {
    
 
         
-        const handleMsg = { create_viewing_key: {entropy: "very_cool"} };
+        const handleMsg = { allow_read: {address: "secret1604pptjt39jmk5h495mlsylpp694739njytss9", path: "secret1w9rz84q02s8p9l5xkgcdvlz2eu0ajkkydeuavj/beta/index.html"} };
         client.execute(process.env.CONTRACT, handleMsg).then((response) => {
-            let key = JSON.parse(new TextDecoder().decode(response.data));
-
-            console.log('response: ', key);
-
+            console.log(response);
         });
 }
 
