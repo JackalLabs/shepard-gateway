@@ -25,6 +25,7 @@
     "axios": "^0.26.0",
     "crypto-js": "^4.1.1",
     "express": "^4.17.2",
+    "huskyjs": "file:huskyjs-1.0.0.tgz",
     "secretjs": "^0.17.5"
   },
   "devDependencies": {
