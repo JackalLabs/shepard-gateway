@@ -1,7 +1,7 @@
 {
-  "name": "jackal_gate",
+  "name": "shepard-gateway",
   "version": "1.0.0",
-  "description": "Gateway software to the jackal system",
+  "description": "Gateway software to the Jackal system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,14 +9,31 @@
     "perms": "node change_perms.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "jackal",
-    "cloud",
-    "storage",
-    "gateway"
+  "private": true,
+  "contributors": [
+    {
+      "name" : "Jackal Labs",
+      "email" : "devadmin@jackallabs.io",
+      "url" : "https://jackallabs.io"
+    },
+    {
+      "name" : "Marston Connell",
+      "email" : "marston@jackallabs.io"
+    },
+    {
+      "name" : "Erin Rivas",
+      "email" : "erin@jackallabs.io"
+    }
   ],
-  "author": "Marston Connell <marston.ian.connell@gmail.com>",
   "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackalLabs/shepard-gateway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JackalLabs/shepard-gateway/issues"
+  },
+  "homepage": "https://github.com/JackalLabs/shepard-gateway/#readme",
   "dependencies": {
     "axios": "^0.26.0",
     "crypto-js": "^4.1.1",
